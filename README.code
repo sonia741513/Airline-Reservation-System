@@ -27,7 +27,7 @@ def fun8():
     e1=Entry(root2)
     e1.grid(row=0,column=1)
     Label(root2,text="Choose your class").grid(row=1,column=0)
-    w2=Combobox(root2,height=5,width=15,values=["BusinessClass","Economic"])
+    w2=Combobox(root2,height=5,width=15,values=["BusinessClass","Economy"])
     w2.grid(row=1,column=1)
     Label(root2,text="select boarding").grid(row=2,column=0)
     w3=Combobox(root2,height=5,width=15,values=["Canada","Chicago","Dallas","San Francisco"])
@@ -41,7 +41,7 @@ def fun8():
         y=str(c)
         con.commit()
         if d=='' or b=='' or c=='':
-             tkMessageBox.showerror("Oops","You can't Enter the leave any field empty")
+             tkMessageBox.showerror("Oops","You can't leave any field empty")
         else:     
              if b=="economic":
                 cur.execute("delete from economic2 where adno=(?) and boarding=(?)",(d,b,))
